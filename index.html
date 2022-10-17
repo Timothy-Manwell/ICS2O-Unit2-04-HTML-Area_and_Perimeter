@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- ICS2O-Unitxxx -->
+<!-- ICS2O-Unit2-04-HTML -->
 <html lang="en-ca">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="xxx" />
+    <meta name="description" content="Area of a triangle with JavaScript" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Timothy Manwell" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,18 +20,65 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <title>xxx</title>
+    <title>Area of a triangle with JavaScript</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">xxx</span>
+          <span class="mdl-layout-title">Area of a triangle with JavaScript</span>
         </div>
       </header>
-      <main class="mdl-layout__content">
-        <div class="page-content" style="padding-left: 100px"></div>
+      <main class="mdl-layout__content"></main>
+        <img src="./images/areaoftriangle.png" alt="area of triangle" class="img1">
+        <br />
+        <h3>Formula</h3>
+        <h4>A=bh/2</h4>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Base in cm</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="base-of-triangle"
+            />
+            <label class="mdl-textfield__label" for="base-entered"
+              >Base here ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Height in cm</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height-of-triangle"
+            />
+            <label class="mdl-textfield__label" for="height-entered"
+              >Height here ...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="enterClicked()"
+        >
+          Calculate
+        </button>
+        <br />
+        <br />
+        <br />
+        <div id="area-of-triangle"></div>
       </main>
     </div>
   </body>
